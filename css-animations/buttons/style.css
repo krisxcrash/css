@@ -1,0 +1,282 @@
+body {
+  /* box-sizing: border-box; */
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+/* Button 1 */
+
+#button1 {
+  text-decoration: none;
+  color: #ff33cc;
+  font-size: 30px;
+  border: 5px solid #bbb;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+#button1:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: top left;
+  transform: rotate(-90deg);
+  transition: transform 1s;
+}
+
+#button1:hover:before {
+  transform: rotate(0deg);
+}
+
+#button1:hover {
+  color: #fff;
+}
+
+/* Button 2 */
+
+#button2 {
+  text-decoration: none;
+  color: #00ddff;
+  font-size: 30px;
+  border: 5px solid #bbb;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+#button2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: -1;
+  transform: translateX(-100%); /* translateY == top to bottom */
+  transition: all 1s;
+}
+
+#button2:hover:before {
+  transform: translateX(0);
+}
+
+#button2:hover {
+  color: #fff;
+}
+
+/* Button 3 */
+
+#button3 {
+  text-decoration: none;
+  color: #838dff;
+  font-size: 30px;
+  border: 5px solid #bbb;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+#button3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: 1s;
+  z-index: -1;
+  transform: rotateX(90deg);
+}
+#button3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: 1s;
+  z-index: -1;
+  transform: rotateY(90deg);
+}
+
+#button3:hover:before {
+  transform: rotateX(0);
+}
+
+#button3:hover:after {
+  transform: rotateY(0);
+}
+
+#button3:hover {
+  color: #fff;
+}
+
+/* Button 4 */
+
+#button4 {
+  text-decoration: none;
+  color: #ffb700;
+  font-size: 30px;
+  border: 5px solid #bbb;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 500ms;
+  letter-spacing: 0;
+}
+
+#button4:hover {
+  font-weight: 900;
+  letter-spacing: 5px;
+  border-width: 8px;
+}
+
+/* Button 5 */
+
+#button5 {
+  text-decoration: none;
+  color: #ff99da;
+  font-size: 30px;
+  border: 5px solid #bbb;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 500ms;
+  letter-spacing: 0;
+}
+
+#button5:before {
+  content: "Awesome!";
+  color: #fff;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-100%);
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button5:hover:before {
+  transform: translateY(0);
+}
+
+/* Button 6 */
+
+#button6 {
+  text-decoration: none;
+  color: #83ff92;
+  font-size: 30px;
+  border: 5px solid #bbb;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+#button6:before {
+  content: "";
+  background-color: #bbb;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 1s;
+}
+
+#button6:hover:before {
+  transform: translateX(100%) rotate(45deg);
+}
+
+#button6:hover {
+  background-color: #000;
+}
+
+/* Button 7 */
+
+#button7 {
+  text-decoration: none;
+  font-size: 30px;
+  border: 5px solid #bbb;
+  background-color: #000;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+  color: transparent;
+}
+
+#button7:before {
+  content: "Hover me!";
+  color: #ff33cc;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button7:after {
+  content: "Hover me!";
+  color: #ff33cc;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-100%, 100%);
+}
+
+#button7:hover:before {
+  transform: translate(100%, -100%);
+}
+
+#button7:hover:after {
+  transform: translate(0, 0);
+}
+
+/* Button 8 */
+
+#button8 {
+  text-decoration: none;
+  color: #00cecb;
+  font-size: 30px;
+  border: 5px solid #bbb;
+  padding: 20px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
