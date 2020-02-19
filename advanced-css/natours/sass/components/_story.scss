@@ -6,7 +6,7 @@
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
-  background-color: $color-white;
+  background-color: rgba($color-white, 0.6);
   transform: skewX(-12deg);
 
   &__shape {
